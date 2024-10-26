@@ -1,7 +1,7 @@
 # Use an official Python runtime as a parent image
 FROM python:3.9-slim
 
-# Install system dependencies needed for Python packages, document conversion, and spaCy
+# Install system dependencies needed for Python packages, document conversion, Tesseract OCR, spaCy, and Poppler for PDF processing
 RUN apt-get update && \
     apt-get install -y \
     build-essential \
@@ -9,7 +9,9 @@ RUN apt-get update && \
     libssl-dev \
     libffi-dev \
     python3-dev \
-    libreoffice && \
+    libreoffice \
+    poppler-utils \
+    tesseract-ocr && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
