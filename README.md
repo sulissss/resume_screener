@@ -51,3 +51,9 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    git clone https://github.com/yourusername/resume-screener.git
    cd resume-screener
+
+2. Set the LLM model in the .env file
+3. Run your local LLM
+```bash
+   ollama run <LLM_MODEL>
+  
